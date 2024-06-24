@@ -41,11 +41,11 @@ public class player : MonoBehaviour
         transform.Translate(moveVector*(moveSpeed*Time.deltaTime));
         //rotate
         Vector3 headRotation = HeadPivot.localEulerAngles;
-        if(headRotation.x < 260f &&headRotation.x > 40f){
-            float big = Mathf.Abs(headRotation.x - 260f);
+        if(headRotation.x < 320f &&headRotation.x > 40f){
+            float big = Mathf.Abs(headRotation.x - 320f);
             float small = Mathf.Abs(headRotation.x - 40f);
             if(big < small ){
-                HeadPivot = f;
+                HeadPivot = -40f;
             }else if(small < big){
                 HeadPivot = 40f;
             }
@@ -72,4 +72,5 @@ public class player : MonoBehaviour
         }
         
     }
+    
 }
